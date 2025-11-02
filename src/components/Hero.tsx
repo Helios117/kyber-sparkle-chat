@@ -60,7 +60,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => window.open('https://photon2.vercel.app', '_blank')}
+              onClick={() => window.open('https://photon3.vercel.app', '_blank')}
               className="border-primary/30 hover:bg-primary/10 text-foreground text-lg px-8 py-6"
             >
               Visit Photon
