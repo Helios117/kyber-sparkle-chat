@@ -11,6 +11,23 @@ export const Hero = () => {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(195_100%_50%/0.1),transparent_50%)]" />
+        {/* Animated particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-primary/20"
+              style={{
+                width: `${Math.random() * 4 + 2}px`,
+                height: `${Math.random() * 4 + 2}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${Math.random() * 10 + 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Content */}
@@ -43,9 +60,10 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={() => window.open('https://photon2.vercel.app', '_blank')}
               className="border-primary/30 hover:bg-primary/10 text-foreground text-lg px-8 py-6"
             >
-              Learn More
+              Visit Photon
             </Button>
           </div>
 
